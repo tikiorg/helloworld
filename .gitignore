@@ -1,0 +1,13 @@
+.buildpath*
+.cache*
+.htaccess
+.idea*
+.lastup*
+.metadata*
+.project*
+.settings*
+.svn*
+project.index*
+svn-commit*.tmp*
+*.swp
+temp/* 
