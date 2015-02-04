@@ -1,2 +1,7 @@
 {
+	"0.1": {
+		"remove": [],
+		"forget": ["02_content"],
+		"reapply": []
+	}
 }

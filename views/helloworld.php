@@ -2,6 +2,24 @@
 
 namespace tikiaddon\tikiorg\helloworld;
 
+function helloworld_info()
+{
+	return array(
+		'name' => tra('Print Hello World'),
+		'description' => tra('Display output of a Tiki Addon View'),
+		'filter' => 'text',
+		'params' => array(
+			'color' => array(
+				'required' => false,
+				'name' => tra('Color of introductory text'),
+				'description' => tra('The color to display the introductory text in'),
+				'extraparams' => false,
+				'filter' => 'text',
+			),
+		),
+	);
+}
+
 function helloworld($data, $params)
 {
 	// extracts parameters passed from wikiplugin_addon.php
@@ -11,6 +29,10 @@ function helloworld($data, $params)
 	$helloworld = \TikiAddons::get('tikiorg_helloworld');
 
 	$foo = $helloworld->lib('foo');
+
+	if (!empty($color)) {
+		$helloworld->smarty->assign('color', $color);
+	}
 
 	// Warning: the following lines use the Tiki global smarty object,
 	// which is *bad* practice as it can cause variables to be overwritten.

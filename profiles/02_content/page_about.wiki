@@ -6,4 +6,4 @@ Tiki Addons is a way to deploy custom "apps" or other addons to Tiki. It support
 *Language Files
 *PHP Code in libs and views 
 !Example of View
-{addon package="tikiorg/helloworld" view="helloworld"}
+{addon package="tikiorg/helloworld" view="helloworld" color="green"}
